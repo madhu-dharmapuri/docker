@@ -1,10 +1,9 @@
 FROM alpine:3.4
 
-RUN apk update
+RUN apk update && apk add vim curl nginx
+MKDIR /home/downloads
+cd /home/downloads
+RUN git
 
-RUN apk add vim
 
-RUN apk add curl
-
-RUN apk add nginx
 
