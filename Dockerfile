@@ -1,6 +1,4 @@
-FROM centos As build
-COPY . /home/
-RUN cat /home/test
-RUN  mkdir /home/download
-RUN yum install nginx
+FROM alpine:3.4
 
+RUN apk update && apk add vim curl nginx
+RUN apk add git
